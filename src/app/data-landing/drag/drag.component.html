@@ -1,0 +1,77 @@
+<div class="wrapper">
+  <!-- <div class="open_menu">
+    <div class="open_menu_container" *ngIf="open_menu_status">
+      <div (dragend)="select_close()" class="drag-drawflow" draggable="true" ondragstart="drag(event)"
+        data-node="input_data">
+        <span><img style="width:25px;" src="assets/img/data-icon-no-bg.svg" alt=""></span><span>&nbsp;Data</span>
+      </div>
+      <div (dragend)="select_close()" class="drag-drawflow" draggable="true" ondragstart="drag(event)"
+        data-node="filter">
+        <span><img style="width:25px;" src="assets/img/filter.svg" alt=""></span><span>&nbsp;Filter</span>
+      </div>
+      <div (dragend)="select_close()" class="drag-drawflow" draggable="true" ondragstart="drag(event)"
+        data-node="output_data">
+        <span><img style="width:25px;" src="assets/img/data-icon-no-bg.svg" alt=""></span><span>&nbsp;Join</span>
+      </div>
+      <div (dragend)="select_close()" class="drag-drawflow" draggable="true" ondragstart="drag(event)"
+        data-node="filter">
+        <span><img style="width:25px;" src="assets/img/transform.svg" alt=""></span><span>&nbsp;Transform</span>
+      </div>
+      <div (dragend)="select_close()" class="drag-drawflow" draggable="true" ondragstart="drag(event)"
+        data-node="filter">
+        <span><img style="width:25px;" src="assets/img/edit_column.svg" alt=""></span><span>&nbsp;Edit Column</span>
+      </div>
+    </div>
+    <button (click)="open_menu()" class="menu_open_button">+</button>
+  </div> -->
+  <div class="col-right">
+    <div (click)="select_close()" [ngStyle]="{'width' : side_bar_status? 'calc(100vw - min(600px,41vw))' : '100vw'}"
+      id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <!-- <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div> -->
+      <!-- <div class="bar-zoom">
+        <i style="color: white;" class="fas fa-search-minus" onclick="editor.zoom_out()"></i>
+        <i style="margin: 0px 20px;color: white;" class="fas fa-search" onclick="editor.zoom_reset()"></i>
+        <i style="color: white;" class="fas fa-search-plus" onclick="editor.zoom_in()"></i>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- <div style="margin-bottom: 200px;margin-left:200px;">
+  <div class="relative_workspace_container">
+    <div class="absolute_workspace_click_menu" id="absolute_workspace_click_menu">
+      <div (click)="select_close()" class="drag-drawflow" draggable="true" data-node="input_data" onclick="drop2(event)">
+        <span><img style="width:25px;" src="assets/img/data-icon-no-bg.svg" alt=""></span><span>&nbsp;Data</span>
+      </div>
+      <div (click)="select_close()" class="drag-drawflow" draggable="true" data-node="filter" onclick="drop2(event)">
+        <span><img style="width:25px;" src="assets/img/filter.svg" alt=""></span><span>&nbsp;Filter</span>
+      </div>
+      <div (click)="select_close()" class="drag-drawflow" draggable="true" data-node="output_data" onclick="drop2(event)">
+        <span><img style="width:25px;" src="assets/img/data-icon-no-bg.svg" alt=""></span><span>&nbsp;Join</span>
+      </div>
+    </div>
+    <div class="absolute_workspace_menu">
+      <div class="workspace_menu">
+        <img class="add_node" src="assets/Images/Add.svg" alt="" onclick="show('top_menu')">
+      </div>
+      <div class="workspace_middle_menu">
+        <img class="add_node" src="assets/Images/Add.svg" alt="" onclick="show('left_menu')">
+        <img class="add_node" src="assets/Images/Add.svg" alt="" onclick="show('right_menu')">
+      </div>
+      <div class="workspace_menu">
+        <img class="add_node" src="assets/Images/Add.svg" alt="" onclick="show('bottom_menu')">
+      </div>
+    </div>
+    <div class="workspace h-100">
+      <div class="stage-card d-flex align-items-center">
+        <div class="data-image">
+          <img src="assets/img/data-icon-no-bg.svg" alt="">
+        </div>
+        <div class="step-file-name">
+          <div class="step light-text">Step 1: Data</div>
+          <div class="file-name heading-3">Prod_01_04_2022</div>
+        </div>
+        <div class="check-icon"><img src="assets/img/check-icon.svg" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div> -->

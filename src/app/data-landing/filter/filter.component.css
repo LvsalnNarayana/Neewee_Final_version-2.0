@@ -1,0 +1,14 @@
+app-filter-container {
+  height: calc(100vh - 262px) !important;
+  overflow-y: scroll;
+}
+app-filter-container::-webkit-scrollbar{
+  display: none;
+}
+app-filter-summary{
+  height: calc(100vh - 262px) !important;
+  overflow-y: scroll;
+}
+app-filter-summary::-webkit-scrollbar{
+  display: none;
+}

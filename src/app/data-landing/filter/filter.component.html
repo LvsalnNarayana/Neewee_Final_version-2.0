@@ -1,0 +1,8 @@
+<div class="h-100 d-flex flex-column justify-content-between">
+  <app-filter-header></app-filter-header>
+  <app-filter-container class="h-100 filter_container" *ngIf="!filter_status;else filter_summary"></app-filter-container>
+  <ng-template #filter_summary>
+    <app-filter-summary  class="h-100"></app-filter-summary>
+  </ng-template>
+  <app-filter-footer class="pt-3"></app-filter-footer>
+</div>

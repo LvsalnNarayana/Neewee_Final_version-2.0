@@ -1,0 +1,31 @@
+<div class="data-add-filter-link text-end pt-3 pb-3">
+  <p class="text-primary" style="cursor: pointer;">Claculate Summary</p>
+</div>
+<div class="d-flex justify-content-between flex-column" *ngFor="let filter of filters">
+  <p class="mx-2 my-1" *ngIf="filter._id != 10000">
+    {{filter.condition}}
+  </p>
+  <div class="data-area-filter-container h-100">
+    <div class="data-area-filter m-2">
+      <div class="data-area-filter-header d-flex justify-content-between align-items-center p-2">
+        <p>
+          <strong>{{filter.filter_name}}</strong>
+        </p>
+        <!-- <p class="text-primary" style="cursor: pointer;" (click)="edit_filter()">
+          Edit
+        </p> -->
+      </div>
+      <div class="data-area-filter-body p-2">
+        <div class="p-2">
+          <span class="filter_summary_inner_title">Filter</span>&nbsp;&nbsp;>&nbsp;&nbsp;
+          <span class="filter_summary_inner_key">{{filter.key}} ===</span>
+          <span class="filter_summary_value" *ngFor="let value of filter.value">Value = {{value}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="data-add-filter-link text-end pt-3">
+  <p class="text-primary" style="cursor: pointer;" (click)="fulltable_open()">View full table</p>
+</div>
+

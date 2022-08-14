@@ -1,0 +1,25 @@
+<div class="modal_box_container">
+  <div class="modal_box_dialog">
+    <div class="modal_box">
+      <div class="modal_box_aligner">
+        <div class="modal_box_header">
+          <div class="modal_box_title" #box_title>
+            <ng-content select="[modal_header]"></ng-content>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="close_modal" (click)="modalbox_close()">&#10006;</p>
+          </div>
+        </div>
+        <div class="modal_box_body_container pt-3">
+          <ng-content select="[modal_body]"></ng-content>
+          <!-- full data table with drag container -->
+          <div class="modal_box_body" #elemt (mousedown)="startDragging($event, false, elemt)"
+            (mouseup)="stopDragging($event, false)" (mouseleave)="stopDragging($event, false)"
+            (mousemove)="moveEvent($event, elemt)">
+            <ng-content select="[full_table]"></ng-content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

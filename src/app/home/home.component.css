@@ -1,0 +1,211 @@
+.main-content-wrapper {
+  height: 100vh !important;
+  padding-top: 56px;
+}
+.main-content-wrapper
+  .left-sidebar-wrapper
+  .left-sidebar
+  .left-sidebar-documents {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 25px;
+}
+.left-sidebar-wrapper {
+  padding: 17px 31px 35px;
+  background: #e5e5e5;
+  min-width: 310px;
+}
+.left-sidebar .left-sidebar-resources .learn-more-link a {
+  line-height: 16px;
+  color: #1865f2;
+  text-decoration: none;
+  cursor: pointer;
+}
+.recent-docs-area-wrapper .recent-docs-area .empty-state-image {
+  margin-bottom: 50px;
+}
+.recent-docs-area-wrapper .recent-docs-area .heading-1 {
+  margin-bottom: 14px;
+}
+.recent-docs-area-wrapper .recent-docs-area .primary-text {
+  margin-bottom: 27px;
+  padding-left: 16%;
+  padding-right: 16%;
+}
+.recent-docs-area-wrapper .recent-docs-area .cta-buttons .theme-btn-outline {
+  margin-right: 16px;
+}
+
+/*===============================*/
+/*========= Hide File ===========*/
+/*===============================*/
+.hide_file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.hide_file + label {
+  background: var(--theme-color-primary) !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding: 8px 16px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+/*===============================*/
+/*========= Modal Box ===========*/
+/*===============================*/
+.modal_header {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+.file_meta_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+}
+.file_meta_name,
+.file_meta_size {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.file_icon_container {
+  width: 13%;
+  margin-right: 3%;
+}
+.file_icon_container img {
+  width: 100%;
+}
+.file_text {
+  width: 84%;
+}
+.size_icon_container {
+  width: 13%;
+  margin-right: 3%;
+}
+.size_icon_container img {
+  width: 100%;
+}
+.size_text {
+  width: 84%;
+}
+.form_container{
+  height: 50vh;
+  overflow-y: scroll;
+  margin: 25px 0px 0px 0px;
+}
+.form_container::-webkit-scrollbar {
+  display: none;
+}
+
+.select_form_container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.select_all_container {
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+.select_container {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.select_container:last-child {
+  border-bottom: 0px !important;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media screen and (min-device-width: 0px) and (max-device-width: 768px) {
+  .cta-buttons{
+    flex-direction: column;
+  }
+  .recent-docs-area-wrapper .recent-docs-area .cta-buttons .theme-btn-outline {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+.submit_fixed{
+  background-color: white;
+  position: sticky;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px 0px;
+}

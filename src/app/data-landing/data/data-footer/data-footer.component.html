@@ -1,0 +1,21 @@
+<div class="data-area-footer mt-3 d-flex align-items-center justify-content-center flex-column position-relative">
+  <div class="btn-group">
+    <button (click)="dropdown()" type="button" class="btn dropdown-btn">
+      <img src="assets/img/plus-btn.svg" alt="">
+    </button>
+    <div class="dropdown-menu" [ngClass]="{'show':drop_down}">
+      <div>
+        <p class="dropdown_link" routerLink="/document/filter">Filter</p>
+      </div>
+      <div><a href="#">Filter</a></div>
+      <div><a href="#">Filter</a></div>
+    </div>
+  </div>
+  <div class="pt-5 d-flex align-items-center justify-content-start w-100">
+    <div class="next-prev-btn">
+      <button class="btn" id="prev-btn"><img src="assets/img/prev-step.svg" alt=""></button>
+      <button routerLink="/document/filter" class="btn" id="next-btn"><img src="assets/img/next-step.svg"
+          alt=""></button>
+    </div>
+  </div>
+</div>

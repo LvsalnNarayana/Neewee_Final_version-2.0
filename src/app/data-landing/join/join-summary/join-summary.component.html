@@ -1,0 +1,19 @@
+<div class="join_summary_container">
+  <div class="data-area-filter m-2">
+    <div class="data-area-filter-header d-flex justify-content-between align-items-center p-2">
+      <p>
+        <strong>{{join_name}} between</strong>
+      </p>
+    </div>
+    <div class="data-area-filter-body p-3  row">
+      <div class="col-md-6">
+        <p class="text-primary my-2">Prod_01_04_2022</p>
+        <div class="filter_summary_value" *ngFor="let left_array_item of join_summary.left_array">{{left_array_item}}</div>
+      </div>
+      <div class="col-md-6">
+        <p class="text-primary my-2">{{this.required_functionalities.join_data_object.data_catalog_name}}</p>
+        <div class="filter_summary_value" *ngFor="let right_array_item of join_summary.right_array">{{right_array_item}}</div>
+      </div>
+    </div>
+  </div>
+</div>

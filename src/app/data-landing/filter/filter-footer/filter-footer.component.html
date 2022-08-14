@@ -1,0 +1,25 @@
+<div class="data-area-footer d-flex align-items-center justify-content-center flex-column position-relative">
+  <div class="btn-group">
+    <button (click)="dropdown()" type="button" class="btn dropdown-btn">
+      <img src="assets/img/plus-btn.svg" alt="">
+    </button>
+    <div class="dropdown-menu" [ngClass]="{'show':drop_down}">
+
+    </div>
+  </div>
+  <div class="pt-5 d-flex align-items-center justify-content-between w-100">
+    <div class="next-prev-btn">
+      <button routerLink="/document/data" class="btn" id="prev-btn" (click)="prev_nav()"><img
+          src="assets/img/prev-step.svg" alt=""></button>
+      <button routerLink="/document/join" class="btn" id="next-btn"><img src="assets/img/next-step.svg" alt=""></button>
+    </div>
+    <div class="buttons-wrapper">
+      <button class="btn theme-btn-primary" (click)="apply_filter()"
+        *ngIf="!filter_applied_status ; else filter_applied">Apply Filter</button>
+      <ng-template #filter_applied>
+        <button class="btn theme-btn-outline" (click)="edit_filter()">Edit</button>
+      </ng-template>
+
+    </div>
+  </div>
+</div>

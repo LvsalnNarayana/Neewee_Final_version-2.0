@@ -1,0 +1,26 @@
+<app-toolbox></app-toolbox>
+<div class="add_catalog_wrapper">
+  <div class="workspace-wrapper w-100 h-100">
+    <div class="workspace h-100">
+      <div class="empty-data-area w-100 h-100 d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="empty-data-img">
+            <img src="assets/img/empty-data.svg" alt="">
+          </div>
+          <div class="primary-text text-center">
+            <span>Let's start by adding a data catalogue to your calculation.</span>
+          </div>
+          <!-- <div class="cta-button">
+            <input #file_btn class="btn theme-btn-primary hide_file" type="button" name="upload_file" id="upload_file"
+              (click)="new_catalog($event)">
+            <label for="upload_file" class="file_btn">Add Catalog</label>
+          </div> -->
+          <div class="cta-button" routerLink="/document/data">
+            <button class="btn theme-btn-primary">Add Catalog</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

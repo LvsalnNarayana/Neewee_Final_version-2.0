@@ -1,0 +1,78 @@
+<form [formGroup]="form_filter">
+  <div class="filter_condition m-2 d-flex align-items-center" *ngIf="form_id != 10000">
+    <span>And</span>
+    <label class="switch mx-3">
+      <input type="checkbox" formControlName="condition">
+      <span class="slider round"></span>
+    </label>
+    <span>Or</span>
+  </div>
+  <div class="data-area-filter m-2">
+    <div class="data-area-filter-header d-flex justify-content-between align-items-center p-2">
+      <div>
+        <p><strong>{{filter_name}}</strong></p>
+      </div>
+      <div>
+        <img src="assets/Images/Copy.svg" class="me-3" alt="">
+        <img class="delete_filter" (click)="delete_filter()" src="assets/Images/Delete.svg" alt="">
+      </div>
+    </div>
+    <div class="data-area-filter-body">
+      <div class="form-group radio_filter  pt-3">
+        <div class="d-flex align-items-center" formGroupName="keep_remove_group">
+          <div class="form-check pe-5 ps-5">
+            <input class="form-check-input" value="keep" formControlName="keep_remove" type="radio" name="keep_remove"
+              id="keep">
+            <label class="form-check-label" for="keep">
+              Keep
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" value="remove" formControlName="keep_remove" type="radio" name="keep_remove"
+              id="remove">
+            <label class="form-check-label" for="remove">
+              Remove
+            </label>
+          </div>
+          <p class="mb-2 ps-3">
+            Rows that match
+          </p>
+        </div>
+      </div>
+      <div class="form-group  p-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <label class="form-check-label mb-2" for="flexRadioDefault2">
+              Select a column to begin with
+            </label>
+            <select formControlName="column_key" class="form-select form-select-sm" aria-label=".form-select-sm example"
+              placeholder="Please Select Option">
+              <option *ngFor="let column_key of column_key_options[0] | keyvalue" value="{{column_key.key}}">
+                {{column_key.key}}</option>
+            </select>
+          </div>
+          <div class="col-md-6 px-2">
+            <label class="form-check-label mb-2" for="flexRadioDefault2">
+              Select Operator
+            </label>
+            <select formControlName="operator" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option value="equal">Equal</option>
+              <option value="greater">Greater</option>
+              <option value="greaterorequal">Greater or Equal</option>
+              <option value="lesser">Less</option>
+              <option value="lessorequal">Less or Equal</option>
+              <option value="notequal">Not Equal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group px-3 pt-2 pb-3">
+        <label class="form-check-label mb-2" for="flexRadioDefault2">
+          Set parameters
+        </label>
+        <input formControlName="filter_value" type="text" class="form-control form-control-sm"
+          placeholder="Value 1, Value 2, Value 3">
+      </div>
+    </div>
+  </div>
+</form>

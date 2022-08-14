@@ -1,0 +1,25 @@
+<div class="data-area-rowcol-wrapper">
+  <div class="data-area-rowcol">
+    <span>{{storedata_keys_length}} Cols, {{storedata.length}} Rows &nbsp;&nbsp;</span>
+    <a href="#">Edit</a>
+  </div>
+</div>
+<div class="data-area-table-wrapper">
+  <div class="data-area-table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th *ngFor="let keys of storedata_keys | keyvalue | slice:0:5">{{keys.value}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let store_data of $any(storedata | slice:0:number_of_rows)">
+          <td *ngFor="let item of $any(store_data | keyvalue | slice:0:5)">{{item.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="data-area-view-table-link text-end pe-3">
+  <p class="text-primary" style="cursor: pointer;" (click)="fulltable_open()">View full table</p>
+</div>

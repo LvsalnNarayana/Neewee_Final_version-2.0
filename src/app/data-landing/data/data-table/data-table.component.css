@@ -1,0 +1,19 @@
+/*! Sidebar row col styles */
+.data-area-rowcol-wrapper {
+  padding: 16px;
+}
+.data-area-rowcol-wrapper .data-area-rowcol {
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding-left: 19px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+/* !Sidebar table styles */
+.data-area-table-wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.data-area-view-table-link a {
+  margin-right: 30px;
+}

@@ -1,0 +1,21 @@
+.add_catalog_wrapper {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  /* padding-top: 58px; */
+}
+/**************************************/
+/**    Empty data state STYLES    */
+/**************************************/
+
+.empty-data-area > div > div.primary-text {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.empty-data-img {
+  max-width: 86px;
+}

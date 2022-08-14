@@ -1,0 +1,26 @@
+/**************************************/
+/**    toolbar wrapper STYLES    */
+/**************************************/
+
+.toolbar-wrapper {
+  border-bottom: 1px solid #e5e5e5;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05); */
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.toolbar-wrapper .toolbar .tools div {
+  cursor: pointer;
+  padding: 9px 11px;
+  border-right: 1px solid #e5e5e5;
+}
+.active-tool {
+  filter: drop-shadow(0px 4px 4px #00000026);
+}
+.toolbar-wrapper .toolbar .window-toggle {
+  border-left: 1px solid #e5e5e5;
+  padding: 9px 11px;
+  cursor: pointer;
+}
+.sidebar_toggle {
+  cursor: not-allowed !important;
+}

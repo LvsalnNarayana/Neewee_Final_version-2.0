@@ -1,0 +1,9 @@
+/*!Sidebar header styles  */
+
+.data-area-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 13px;
+}
+.data-area-header > .date-time-wrapper > .menu-btn > button.btn {
+  padding: unset;
+}

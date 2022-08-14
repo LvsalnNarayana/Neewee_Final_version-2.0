@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css") */
+:root {
+  /* --theme-color-primary: #ffc000; */
+  --theme-color-primary:#ffc107;
+}
+table thead th{
+  font-size: 13px !important;
+}
+/************************/
+/**    GLOBAL STYLES    */
+/************************/
+*{
+  color: #000000;
+}
+.w-25{
+  width: 25% !important;
+}
+p{
+  margin-bottom: 0px !important;
+}
+body {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+  color: #191919 !important;
+  opacity: 0.7 !important;
+}
+.btn:focus {
+  box-shadow: unset;
+}
+.content-title {
+  font-weight: 500;
+  line-height: 19px;
+  opacity: 0.5;
+  color: #666666;
+  margin-bottom: 7px;
+}
+.heading-1 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #000000;
+}
+.heading-2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #191919;
+}
+.heading-3 {
+  font-weight: 700;
+  line-height: 18px;
+  color: #000000;
+}
+.body-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.theme-btn-outline {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  box-sizing: border-box !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+.theme-btn-primary {
+  background: var(--theme-color-primary) !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding: 8px 16px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+.toolkit-btn-outline {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  box-sizing: border-box !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+  width: 75px;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 14px;
+  height: 32px;
+}
+.toolkit-btn-primary {
+  background: var(--theme-color-primary) !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding: 3px 8px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  width: 75px;
+  font-size: 14px !important;
+  height: 32px;
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

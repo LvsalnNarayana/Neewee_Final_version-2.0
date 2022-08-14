@@ -1,0 +1,151 @@
+<div class="d-flex justify-content-start flex-column pb-4">
+  <div class="join_merge_select_container p-2 px-3">
+    <p class="dropdown_label_text">Select Action</p>
+    <div class="form-select form-select-sm mt-3 mb-2 join_merge_select w-50" (click)="show_join_merge_dropdown()">
+      {{join_data_object.join_merge_text}}
+    </div>
+    <div class="join_merge_dropdown_container w-50 p-2"
+      *ngIf="join_data_object.join_merge_dropdown_status && join_data_object.show_catalog">
+      <p class="join_merge_dropdown_text py-2" (click)="reset_show_join_merge_status('Join')">Join</p>
+      <p class="join_merge_dropdown_text py-2" (click)="reset_show_join_merge_status('Merge')">Merge</p>
+    </div>
+    <p class="text-muted">You can choose any of the actions in dropdown to proceed</p>
+  </div>
+  <div class="catalog_container" *ngIf="join_data_object.show_select_data_catalog">
+    <div class="data_selection_container d-flex justify-content-center align-items-center">
+      <div class="data_heading">
+        Data Catalog 1
+      </div>
+      <div class="data_name text-primary">
+        Prod_01_04_2022
+      </div>
+    </div>
+    <div class="data_current_container d-flex justify-content-center align-items-start">
+      <div class="data_heading">
+        Data Catalog 2
+      </div>
+      <div class="data_name">
+        <div class="catalog_menu">
+          <p (click)="show_catalog_dropdown()" #catalog_name
+            [ngClass]="join_data_object.data_catalog_name != 'Select Another Data Catalog' ? 'text-primary' : 'text-muted form-select custom_select'"
+            [ngStyle]="{'cursor':join_data_object.data_catalog_name != 'Select Another Data Catalog' ? '' : 'pointer'}">
+            {{join_data_object.data_catalog_name}}</p>
+          <div *ngIf="join_data_object.select_catalog_toggle && join_data_object.show_catalog">
+            <p (click)="select_catalog('Prod_04_08_2022' , $event.srcElement)" class="select_catalog">
+              Prod_04_08_2022</p>
+            <p (click)="select_catalog('Prod_08_08_2022', $event.srcElement)" class="select_catalog">
+              Prod_08_08_2022</p>
+            <p class="text-primary select_catalog">Browse all catalogs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="join_container p-3" *ngIf="join_data_object.join_column_container">
+    <div class="join_form_container">
+      <form [formGroup]="join_data">
+        <div class="d-flex justify-content-center align-items-center pt-2 select_join_container">
+          <label class="container">
+            <img src="assets/Images/LeftJoin.svg" alt="" style="margin-right: 10px;">
+            <span>Left Join</span>
+            <input type="radio" formControlName="join_type" value="left_join">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <img src="assets/Images/RightJoin.svg" alt="" style="margin-right: 10px;">
+            <span>Right Join</span>
+            <input type="radio" formControlName="join_type" value="right_join">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <img src="assets/Images/InnerJoin.svg" alt="" style="margin-right: 10px;">
+            <span>Inner Join</span>
+            <input type="radio" formControlName="join_type" value="inner_join">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <img src="assets/Images/FullJoin.svg" alt="" style="margin-right: 10px;">
+            <span>Full Join</span>
+            <input type="radio" formControlName="join_type" value="full_join">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="select_column_container p-2">
+          <div class="select_current_data_column_container">
+            <p>Data Catalog 1 (prod_01_04_2022)</p>
+            <div class="form-select form-select-sm mt-3 mb-2 join_merge_select"
+              (click)="show_column_dropdown('current')">
+              Select Column
+            </div>
+            <div *ngIf="join_data_object.show_column_data_list_current && !data_connected_status"
+              formGroupName="current_data">
+              <div class="py-2 px-0 form-control" *ngIf="!data_ok_continue_status ; else current_keys">
+                <div class="data_keys_container  d-flex align-items-center py-1 px-2"
+                  *ngFor="let current_keys of current_data_keys ; let i">
+                  <input formControlName="{{current_keys}}" type="checkbox" name={{current_keys}} id={{current_keys}}
+                    placeholder={{current_keys}} value={{current_keys}}>
+                  <label style="width: 100%;" for={{current_keys}}
+                    class="data_keys_container_label ms-2">{{current_keys}}</label>
+                </div>
+              </div>
+            </div>
+            <ng-template #current_keys>
+              <div class="d-flex align-items-center keys_card_container">
+                <div *ngFor="let item of left_array" class="bg-primary" [@zoomout]>
+                  <span class="p-1 color-white keys_card">{{item}}</span>
+                  <span (click)="delete_left_key(item)" class="key_close">X</span>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+          <div class="select_new_data_column_container">
+            <p>Data Catalog 2 ({{join_data_object.data_catalog_name}})</p>
+            <div class="form-select form-select-sm mt-3 mb-2 join_merge_select" (click)="show_column_dropdown('new')">
+              Select Column
+            </div>
+            <div *ngIf="join_data_object.show_column_data_list_new" formGroupName="new_data">
+              <div class="py-2 px-0 form-control" *ngIf="!data_ok_continue_status ; else new_keys">
+                <div class="data_keys_container  d-flex align-items-center py-1 px-2"
+                  *ngFor="let new_keys of new_data_keys">
+                  <input formControlName="{{new_keys}}" type="checkbox" name={{new_keys}} id={{new_keys}}
+                    placeholder={{new_keys}} value={{new_keys}}>
+                  <label style="width: 100%;" for={{new_keys}}
+                    class="data_keys_container_label ms-2">{{new_keys}}</label>
+                </div>
+              </div>
+            </div>
+            <ng-template #new_keys>
+              <div class="d-flex align-items-center keys_card_container">
+                <div *ngFor="let item of right_array" class="bg-primary" [@zoomout]>
+                  <span class="p-1 color-white keys_card">{{item}}</span>
+                  <span (click)="delete_right_key(item)" class="key_close">X</span>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+        <div *ngIf="data_ok_continue_status" class="join_match_container p-3">
+          <div class="match_condition_container p-3">
+            <p style="font-size: 14px;" class="text-left my-2">Match Condition(s)</p>
+            <div class="row g-0">
+              <div class="col-md-5 me-2">
+                <input class="form-control form-control-sm" type="text" name="match_condition" id="match_condition"
+                  value="Invoice_ID">
+              </div>
+              <div class="col-md-5 ms-2">
+                <input class="form-control form-control-sm" type="text" name="match_condition" id="match_condition"
+                  value="Invoice_ID">
+              </div>
+              <div class="col-md-1">
+                <div class="d-flex align-items-center h-100">
+                  <span class="ms-2 me-3" style="cursor: pointer;"><img src="assets/Images/Close.svg" alt=""></span>
+                  <span style="cursor: pointer;"><img src="assets/Images/Add.svg" alt=""></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

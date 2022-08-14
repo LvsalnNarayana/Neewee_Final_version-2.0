@@ -1,0 +1,39 @@
+
+/* !Sidebar footer styles */
+.data-area-footer {
+  padding: 0px 18px 10px 18px;
+  border-top: 1px solid #e5e5e5;
+}
+.dropdown{
+  margin: -24px;
+}
+.btn-group{
+  margin: -30px !important;
+}
+.dropdown-menu{
+  top: -124px;
+  z-index: 999;
+  padding: 10px !important;
+}
+.dropdown-menu div{
+  padding: 10px 0px;
+}
+.dropdown_link{
+  cursor: pointer;
+}
+/* .data-area-footer::before {
+  content: url("assets/img/plus-btn.svg");
+  position: absolute;
+  top: -39%;
+  left: 48%;
+} */
+
+.data-area-footer .next-prev-btn button {
+  padding: unset;
+}
+.data-area-footer .next-prev-btn button:nth-child(1) {
+  margin-right: 11px;
+}
+.data-area-footer .buttons-wrapper button:nth-child(1) {
+  margin-right: 16px;
+}

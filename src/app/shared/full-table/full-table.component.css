@@ -1,0 +1,33 @@
+.data_search {
+  width: 100%;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+.wrapper {
+  overflow-y: scroll;
+  height: calc(85vh - 200px);
+}
+.wrapper::-webkit-scrollbar{
+  display: none;
+}
+/* table_style */
+.table_style{
+  width: 100%;
+}
+.table_style thead tr th{
+  position: sticky;
+  top: 0px;
+
+}
+.th_div{
+  padding:7px 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid black;
+}
+.table_style tbody tr td{
+  padding:7px 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,22 @@
+/*menu container*/
+.open_menu_container {
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgba(14, 14, 14, 1);
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+.menu_open_button {
+  border: 0px;
+  padding: 15px;
+  background-color: #e5e5e5;
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+#drawflow {
+  position: relative;
+  height: 100%;
+  margin: 0px !important;
+}

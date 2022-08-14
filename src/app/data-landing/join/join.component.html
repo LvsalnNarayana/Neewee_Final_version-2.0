@@ -1,0 +1,8 @@
+<div class="h-100 d-flex flex-column justify-content-between">
+  <app-join-header></app-join-header>
+  <app-join-container class="h-100 filter_container" *ngIf="!join_status;else join_summary"></app-join-container>
+  <ng-template #join_summary>
+    <app-join-summary  class="h-100"></app-join-summary>
+  </ng-template>
+  <app-join-footer></app-join-footer>
+</div>

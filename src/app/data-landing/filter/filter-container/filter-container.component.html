@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-between flex-column">
+  <div class="data-area-filter-container h-100">
+    <app-filter-form class="filter_form" *ngFor="let filter of filters" [form_id]="filter._id"></app-filter-form>
+  </div>
+  <div class="data-add-filter-link text-end pt-3">
+    <p class="text-primary" (click)="create_new_filter()">+ Add Filter</p>
+  </div>
+</div>

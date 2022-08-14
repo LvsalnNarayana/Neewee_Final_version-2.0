@@ -1,0 +1,170 @@
+.join_merge_select_container {
+  background-color: rgba(242, 242, 242, 1);
+}
+.dropdown_label_text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+.join_merge_select {
+  cursor: pointer;
+  user-select: none;
+}
+.join_merge_dropdown_container,
+.data_column_dropdown_container {
+  width: 50%;
+  background-color: white;
+  border-radius: 0.2rem;
+  border: 1px solid #ced4da;
+  user-select: none;
+}
+
+.join_merge_dropdown_text {
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+/*select catalog*/
+.select_catalog {
+  cursor: pointer;
+}
+/* catalog table */
+.data_heading {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: 0px;
+}
+.data_name {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.data_current_container .data_name {
+  padding: 0px;
+}
+.catalog_menu p {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.catalog_menu p:last-child {
+  border: 0px;
+}
+/* form container */
+.join_form_container {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+/* join check box*/
+.select_join_container {
+  border-bottom: 1px solid #ccc;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0px 5px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 25%;
+}
+.custom_select{
+  border: 0px !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  line-height: 18px !important;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  border-bottom: 3px solid #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/*data column container*/
+.select_column_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.select_column_container .select_current_data_column_container,
+.select_column_container .select_new_data_column_container {
+  width: 50%;
+  padding: 0px 7px;
+}
+.data_keys_container:hover {
+  background-color: #216BFF;
+  cursor: pointer;
+}
+.data_keys_container:hover .data_keys_container_label {
+  color: white !important;
+  cursor: pointer;
+}
+.keys_card_container {
+  flex-wrap: wrap;
+}
+.keys_card_container div {
+  min-width: 45%;
+  margin: 2px 2px;
+  padding: 2px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+}
+.keys_card {
+  display: block;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+.key_close {
+  color: white;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.join_match_container{
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+.join_match_container p{
+  cursor: pointer;
+}
+.match_condition_container{
+  background-color: rgba(242, 242, 242, 1);
+  border-radius: 4px;
+}

@@ -1,0 +1,23 @@
+/*!Sidebar header styles  */
+
+.data-area-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 13px;
+}
+.data-area-header > .date-time-wrapper > .menu-btn > button.btn {
+  padding: unset;
+}
+app-join-container {
+  height: calc(100vh - 262px) !important;
+  overflow-y: scroll;
+}
+app-join-container::-webkit-scrollbar{
+  display: none;
+}
+app-join-summary{
+  height: calc(100vh - 262px) !important;
+  overflow-y: scroll;
+}
+app-join-summary::-webkit-scrollbar{
+  display: none;
+}

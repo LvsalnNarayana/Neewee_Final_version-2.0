@@ -1,0 +1,20 @@
+.app_drag_node{
+  min-height: calc(100vh - 100px);
+  max-width: 100vw;
+  /* width: calc(100vw - 41vw); */
+  width: calc(100vw - min(600px,41vw));
+  overflow-x: hidden !important;
+  /* max-width: 100%; */
+}
+
+.app_data{
+  max-width: 599px;
+  width: 41vw;
+  /* display: none; */
+  overflow-x: hidden !important;
+  min-height: 100%;
+}
+#data-area-sidebar {
+  background-color: #fff;
+  filter: drop-shadow(-3px 0px 4px rgba(0, 0, 0, 0.05));
+}

@@ -1,0 +1,20 @@
+<div class="toolbar-wrapper" style="padding-top:56px;">
+  <div class="toolbar d-flex justify-content-between align-items-center">
+    <div class="tools d-flex align-items-center justify-content-start">
+      <div class="move-tool"><img src="assets/img/move.svg" alt="move-tool"></div>
+      <div class="pan-tool active-tool"><img src="assets/img/pan-tool.svg" alt="pan-tool"></div>
+      <div class="undo-tool"><img src="assets/img/undo.svg" alt="undo-tool"></div>
+      <div class="redo-tool"><img src="assets/img/redo.svg" alt="redo-tool"></div>
+      <div class="location-tool"><img src="assets/img/location.svg" alt="location-tool"></div>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="d-flex justify-content-center align-items-center" *ngIf="!data_status">
+        <button class="btn toolkit-btn-outline me-2">Save</button>
+        <button class="btn toolkit-btn-primary me-2">Publish</button>
+      </div>
+      <div class="window-toggle" [ngClass]="{'sidebar_toggle':data_status}" (click)="sidebar_toggle()">
+        <img src="assets/img/sidebar-toggle.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

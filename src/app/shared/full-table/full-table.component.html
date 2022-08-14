@@ -1,0 +1,26 @@
+<div class="row justify-content-end data_search px-3">
+  <div class="col-md-3">
+    <div class="form-group">
+      <input type="search" class="form-control" placeholder="Search Data" [(ngModel)]="filtered_string">
+    </div>
+  </div>
+</div>
+<div style="overflow: hidden;" class="mt-5">
+  <div class="wrapper">
+    <table class=" table_style" style="position: relative;" [cellPadding]="'0px'">
+      <thead>
+        <tr>
+          <th *ngFor="let store_data of $any(storedata[0] | keyvalue) ;">
+            <div class="th_div">{{store_data.key}}</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let store_data of $any(storedata)|filter:filtered_string">
+          <td *ngFor="let keys of $any(store_data | keyvalue)">{{keys.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- table table-bordered -->

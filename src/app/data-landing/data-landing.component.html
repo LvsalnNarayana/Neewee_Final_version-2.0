@@ -1,0 +1,27 @@
+<app-toolbox></app-toolbox>
+<div class="d-flex justify-content-between align-items-stretch " style="overflow-x: hidden;">
+  <app-drag class="app_drag_node" [ngStyle]="{'width' : sidebar_open? '' : '100vw'}">
+  </app-drag>
+  <div [@slideInOut] class="app_data" *ngIf="sidebar_open" id="data-area-sidebar">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-modal-box *ngIf="full_table_status">
+  <p class="modal_header table_data" modal_header><strong>Data</strong></p>
+  <app-full-table full_table></app-full-table>
+</app-modal-box>
+<app-modal-box *ngIf="filter_delete_confirmation">
+  <p class="modal_header" modal_header><strong>Delete Filter</strong></p>
+  <div modal_body>
+    <p>
+      Filter: New applied to Data Catalog : fly_wise will be deleted and all assigned actions will be removed.
+      <br><br>
+      Do you want to proceed?
+    </p>
+
+    <div class="d-flex justify-content-end align-items-center py-3">
+      <button class="btn theme-btn-primary" (click) = "delete_filter()">Yes</button>
+      <button class="btn theme-btn-outline ms-3" (click) = "cancel_delete_filter()">Cancel</button>
+    </div>
+  </div>
+</app-modal-box>
